@@ -40,15 +40,15 @@ public class sample5{
         // }
         
         // find the max number in array
-        int[] max_numbers = {34,54,75,23,64};
-        int max_number = max_numbers[0] ;
-        for(int i =0; i<(max_numbers.length); i++ ){
-           if(max_numbers[i] > max_number) {
-            max_number = max_numbers[i];
-           }
-        }
+        // int[] max_numbers = {34,54,75,23,64};
+        // int max_number = max_numbers[0] ;
+        // for(int i =0; i<(max_numbers.length); i++ ){
+        //    if(max_numbers[i] > max_number) {
+        //     max_number = max_numbers[i];
+        //    }
+        // }
         
-        System.out.println("max number is: "+ max_number);
-        s.close();
+        // System.out.println("max number is: "+ max_number);
+        // s.close();
     }
 }
