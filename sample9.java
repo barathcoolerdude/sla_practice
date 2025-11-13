@@ -60,12 +60,19 @@ public class sample9{
     // }
     
 
-    for(int i=1;i<=3;i++){
-        for(int j=1;j<=(i-1)*2;j++){
-            System.out.print("*");
-        }
-        for(int j=0;j<2;j++){
-            System.out.print(i+" ");
+    // for(int i=1;i<=3;i++){
+    //     for(int j=1;j<=(i-1)*2;j++){
+    //         System.out.print("*");
+    //     }
+    //     for(int j=0;j<2;j++){
+    //         System.out.print(i+" ");
+    //     }
+    //     System.out.print("\n");
+    // }
+
+    for(int i=0;i<5;i++){
+        for(int j=0;j<1+(i*2);j++){
+            System.out.print("* ");
         }
         System.out.print("\n");
     }
