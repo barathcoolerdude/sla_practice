@@ -1,33 +1,38 @@
-import java.util.*;
-    class student{
-        public String name;
-        public int rollno;
-        public float marks;
+import java.util.*;   
+       class calculate{ 
 
-        public void getdetails(){
-            Scanner s=new Scanner(System.in);
-            System.out.println("enter the name, roll number and marks");
+        public int addnumbers(int a,int b){
+            int c = a+b;
+            return c;
+        }
 
-            name = s.next();
-            rollno = s.nextInt();
-            marks=s.nextFloat();
+        public int subnumbers(){
+           int c =4-3;
+           return c; 
         }
-        
-        public void displaydetails(){
-            System.out.println(" name: "+ name +" rollno "+ rollno + " marks "+marks);
+
+        public void multiply(int a,int b){
+           System.out.println("with parameter and no return: "+(a*b)) ;
         }
-    }
+
+        public void divide(){
+            System.out.println("without parameter and no return: "+(14/2));
+        }
+    } 
 
 public class sample10{
     public static void main(String[]args){
-        student student1=new student();
-        student student2=new student();
+        calculate student1=new calculate();
 
-        student1.getdetails();
-        student2.getdetails();
+        int parameterAndReturn = student1.addnumbers(3,4);
+        System.out.println("parameter and return: "+ parameterAndReturn);
 
-        student1.displaydetails();
-        student2.displaydetails();
+        int subtract= student1.subnumbers();
+        System.out.println("without parameter and return value: "+ subtract);
+
+        student1.multiply(3, 4);
+
+        student1.divide();
 
     }
 
