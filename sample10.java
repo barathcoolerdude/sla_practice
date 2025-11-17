@@ -1,5 +1,5 @@
-import java.util.*;   
-       class calculate{ 
+ 
+class calculate{ 
 
         public int addnumbers(int a,int b){
             int c = a+b;
@@ -12,7 +12,7 @@ import java.util.*;
         }
 
         public void multiply(int a,int b){
-           System.out.println("with parameter and no return: "+(a*b)) ;
+           System.out.println("with parameter and no return: "+(a*b));
         }
 
         public void divide(){
