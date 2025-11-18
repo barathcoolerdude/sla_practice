@@ -2,12 +2,14 @@ import java.util.*;
 
 public class sample12 {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
         missile missile1 = new missile();
         missile missile2=new missile();
         missile1.load();
         missile2.load();
         missile1.fire();
         missile2.fire();
+        s.close();
     }
 }
 
@@ -19,7 +21,6 @@ class missile{
     private int fuel;
 
     public void load() {
-        Scanner s = new Scanner(System.in);
         enter_count += 1;
         System.out.println("enter missile "+enter_count+" name:");
         name=s.next();
