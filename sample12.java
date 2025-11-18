@@ -5,8 +5,8 @@ public class sample12 {
         Scanner s = new Scanner(System.in);
         missile missile1 = new missile();
         missile missile2=new missile();
-        missile1.load();
-        missile2.load();
+        missile1.load(s);
+        missile2.load(s);
         missile1.fire();
         missile2.fire();
         s.close();
@@ -20,7 +20,7 @@ class missile{
     private String mode;
     private int fuel;
 
-    public void load() {
+    public void load(Scanner s) {
         enter_count += 1;
         System.out.println("enter missile "+enter_count+" name:");
         name=s.next();
