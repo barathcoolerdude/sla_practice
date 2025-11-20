@@ -1,28 +1,26 @@
 import java.util.*;
-class Dosome{
-    private int a,b;
+class mother{
+    public int a, b ,c;
 
-    public Dosome(){
+    public mother(){
         a = 100;
-        b = 200;
+        b=200;
     }
-    public Dosome(int x,int y){
-        a = x;
-        b = y;
-    }
-
-    public void display(){
-        System.out.println("a: "+a+" b: "+b+" c: "+(a+b));
+    public void add(){
+       System.out.println("a: "+a+" b: "+b+" c: "+c) ;
     }
 }
-public class sample14{
+class child extends mother{
+    public void subtract(){
+        c = a -b;
+        System.out.println("c: "+c);
+    }
+}
+
+class sample14{
     public static void main(String[]args){
-        Dosome dosome1=new Dosome();
-        Dosome dosome2=new Dosome(200, 200);
-        dosome1.display();
-        dosome2.display();
-        
-
-
+        child children=new child();
+        children.subtract();
+        children.add();
     }
 }
