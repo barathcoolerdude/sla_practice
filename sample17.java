@@ -1,12 +1,26 @@
-import java.io.*;
 import java.util.*;
+class InValidFoodException extends Exception{
+  public InValidFoodException(String mesg){
+    super(mesg);
+  }
+}
+class sample17{
+  public static void main(String[]args){
+    Scanner s=new Scanner(System.in);
+    System.out.println("give me food");
+    String food = s.nextLine();
 
-class sample1
-{
-  public static void main(String []args) throws IOException, InterruptedException{
-     Thread.sleep(5000); // 5 seconds
-     System.out.println(" hello ");
-   File f=new File("sample123.txt");
-   FileWriter fw=new FileWriter(f);
+    try{
+      if(food== "briyani"){
+        System.out.println("food good");
+      }else{
+         InValidFoodException wrongfood=new InValidFoodException("wrong food");
+         s.close();
+        throw wrongfood;
+      }
+    }catch(InValidFoodException e){
+      System.out.println(e.getMessage());
+    }
+    s.close();
   }
 }
