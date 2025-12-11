@@ -5,7 +5,7 @@ class sample15{
         try{
             File file=new File("//home//coolerdude//java//sla_pratice//sample15.txt");
             FileWriter fw=new FileWriter(file);
-            String word='o';
+            char word='o';
             fw.write(word);
             fw.close();
             
@@ -17,7 +17,6 @@ class sample15{
 
         }catch(IOException e){
             System.out.println(e);
-
         }
     }
 }
