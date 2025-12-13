@@ -8,9 +8,11 @@ class myCommands{
 
             Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "mypassword");
 
-            System.out.print("enter name: age: active(true/false): ");
+            System.out.print("enter name: ");
             String name=s.next();
+            System.out.print("enter age: ");
             int age=s.nextInt();
+            System.out.print("enter active status: ");
             boolean active=s.nextBoolean();
             
             String query="insert into users(name, age, active) values(?,?,?);";
@@ -21,7 +23,7 @@ class myCommands{
             ps.setBoolean(3, active);
 
             int rows= ps.executeUpdate();
-            System.out.print("inserted "+rows+" rows");
+            System.out.print("\n inserted "+rows+" rows\n");
 
             String query2="select * from users;";
 
@@ -31,6 +33,7 @@ class myCommands{
             while(rs2.next()){
                 System.out.println(rs2.getInt(1)+" "+rs2.getString(2)+" "+rs2.getInt(3)+" "+rs2.getBoolean(4));
             }
+            System.out.println();
         conn.close();
         }catch(Exception e){
             System.out.println("exception: "+e);
@@ -84,12 +87,15 @@ class myCommands{
             Statement stmt=conn.createStatement();
             ResultSet rs=stmt.executeQuery(query2);
 
+            System.out.println();
             while(rs.next()){
                 System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3)+" "+rs.getBoolean(4));
             }
-        conn.close();
+            System.out.println();
+            conn.close();
         }catch(Exception e){
             System.out.println("exception: "+e);
+        }finally{
         }
     }
 
@@ -115,6 +121,7 @@ class myCommands{
             while(rs.next()){
                 System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3)+" "+rs.getBoolean(4));
             }
+            System.out.println();
         conn.close();
         }catch(Exception e){
             System.out.println(e);
@@ -149,7 +156,7 @@ class javasql1{
        boolean tocontinue = true;
         myCommands mycommand=new myCommands();
         while(tocontinue){
-       System.out.println("\nwhatchu looking for: 1.add record 2.display record 3.modify record 4.delete record 5.search record 6:End it");
+       System.out.print("\n1.add record 2.display record 3.modify record 4.delete record 5.search record: ");
 
        int request_no =s.nextInt();
        switch(request_no){
